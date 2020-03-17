@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject crosshair;
 
+    string URL = "http://localhost/netshoot/scoreInsert.php";
+    public string InputId, InputName, InputTime, InputScore;
+
     public void CompleteLevel(){
         if (!gameHasEnded){
             gameHasEnded = true;
@@ -20,6 +23,7 @@ public class GameManager : MonoBehaviour
             crosshair.SetActive(false);
             Time.timeScale = 0f;
             Cursor.visible = true;
+            AddScore(InputId, InputName, InputTime, InputScore);
             Cursor.lockState = CursorLockMode.None;
         }
     }
@@ -33,11 +37,22 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+            AddScore(InputId, InputName, InputTime, InputScore);
             //Invoke("Restart", restartDelay); 
         }
     }
 
     void Restart(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void AddScore(string id, string name, string time, string score){
+        WWWForm form = new WWWForm ();
+        form.AddField("addId", id);
+        form.AddField("addName", name);
+        form.AddField("addTime", time);
+        form.AddField("addScore", score);
+
+        WWW www = new WWW (URL, form);
     }
 }

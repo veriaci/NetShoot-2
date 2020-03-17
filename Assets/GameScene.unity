@@ -3042,7 +3042,6 @@ GameObject:
   - component: {fileID: 1526264416}
   - component: {fileID: 1526264417}
   - component: {fileID: 1526264418}
-  - component: {fileID: 1526264420}
   - component: {fileID: 1526264419}
   m_Layer: 0
   m_Name: GameManager
@@ -3108,6 +3107,10 @@ MonoBehaviour:
   endMenuUI: {fileID: 1602974517}
   deadMenuUI: {fileID: 334672075}
   crosshair: {fileID: 676704829}
+  InputId: 123
+  InputName: 123
+  InputTime: 123
+  InputScore: 123
 --- !u!114 &1526264419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,22 +3124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreData: []
---- !u!114 &1526264420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526264414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d0b64d5c978054eb1739d44e57173b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InputId: 
-  InputName: 
-  InputTime: 
-  InputScore: 
 --- !u!1 &1527250078
 GameObject:
   m_ObjectHideFlags: 0

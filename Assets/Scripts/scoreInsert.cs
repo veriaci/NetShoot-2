@@ -7,16 +7,10 @@ public class scoreInsert : MonoBehaviour
     string URL = "http://localhost/netshoot/scoreInsert.php";
     public string InputId, InputName, InputTime, InputScore;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)){
+        if(GameManager.gameHasEnded){
             AddScore(InputId, InputName, InputTime, InputScore);
         }
     }
